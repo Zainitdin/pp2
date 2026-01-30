@@ -1,1 +1,1 @@
-HELLO TEACHER!
+HELLO TEACHER! Give me full pls
