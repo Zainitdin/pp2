@@ -1,6 +1,5 @@
-# ==========================================
 # Task 1
-# ==========================================
+
 
 # Import datetime (for date & time)
 # and timedelta (for time difference calculations)
@@ -17,9 +16,8 @@ new_date = current_date - timedelta(days=5)
 print("Task 1 result:", new_date)
 
 
-# ==========================================
 # Task 2
-# ==========================================
+
 
 # Import date class separately (only date, no time)
 from datetime import date
@@ -40,9 +38,9 @@ print("Today:", today)
 print("Tomorrow:", tomorrow)
 
 
-# ==========================================
+
 # Task 3
-# ==========================================
+
 
 # Get current date and time (includes microseconds)
 now = datetime.now()
@@ -55,9 +53,9 @@ without_microseconds = now.replace(microsecond=0)
 print("Task 3 result:", without_microseconds)
 
 
-# ==========================================
+
 # Task 4
-# ==========================================
+
 
 # Ask user to input first date
 # Format must be: YYYY-MM-DD HH:MM:SS
