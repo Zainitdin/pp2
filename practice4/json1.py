@@ -5,7 +5,7 @@ import json
 
 # Open the file "sample-data.json" in read mode
 # 'with' automatically closes the file after reading
-with open("sample-data.json") as f:
+with open("/Users/zainitdinspv/work/practice4/sample-data.json") as f:
     # json.load() converts JSON data into Python dictionary
     data = json.load(f)
 
@@ -26,7 +26,7 @@ print("-" * 50 + " " + "-" * 20 + " " + "-" * 6 + " " + "-" * 6)
 
 # Loop through each item in the JSON data
 # data["imdata"] accesses the main list in the JSON structure
-for item in data["imdata"]:
+for item in data["imdata"][:3]:
     
     # Access nested dictionary:
     # l1PhysIf → attributes
