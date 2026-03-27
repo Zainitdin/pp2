@@ -1,0 +1,7 @@
+# CSV file used for bulk inserting data into database
+# Each line = one record (row in table)
+# Format: username,phone
+
+john,123456789
+alice,987654321
+bob,555123456
