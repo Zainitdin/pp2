@@ -9,8 +9,8 @@ screen = pygame.display.set_mode((400, 200))
 pygame.display.set_caption("Music Player")
 
 playlist = [
-    "music/sample_tracks/track1.wav",
-    "music/sample_tracks/track2.wav"
+    "/Users/zainitdinspv/work/practice9/music_player/music/Halestorm - Empire State Of Mind (Jay-Z).mp3",
+    "/Users/zainitdinspv/work/practice9/music_player/music/The Weeknd feat. Playboi Carti - Timeless.mp3"
 ]
 
 player = MusicPlayer(playlist)
