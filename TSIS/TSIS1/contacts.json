@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Alice",
+        "email": "alice@gmail.com",
+        "birthday": "2000-05-12",
+        "group": "Friend",
+        "phones": [
+            {
+                "phone": "87011234567",
+                "type": "mobile"
+            },
+            {
+                "phone": "87019876543",
+                "type": "home"
+            }
+        ]
+    },
+    {
+        "name": "Bob",
+        "email": "bob@company.com",
+        "birthday": null,
+        "group": "Work",
+        "phones": [
+            {
+                "phone": "87015556677",
+                "type": "work"
+            }
+        ]
+    },
+    {
+        "name": "Mom",
+        "email": "mom@gmail.com",
+        "birthday": "1979-03-22",
+        "group": "Family",
+        "phones": [
+            {
+                "phone": "87017778899",
+                "type": "mobile"
+            }
+        ]
+    },
+    {
+        "name": "Alex",
+        "email": "alex@yahoo.com",
+        "birthday": "1998-11-02",
+        "group": "Other",
+        "phones": [
+            {
+                "phone": "87016667788",
+                "type": "mobile"
+            },
+            {
+                "phone": "87019990000",
+                "type": "work"
+            }
+        ]
+    }
+]

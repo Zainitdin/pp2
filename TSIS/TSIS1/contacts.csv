@@ -1,0 +1,9 @@
+name,email,birthday,group,phone,phone_type
+Alice,alice@gmail.com,2000-05-12,Friend,87011234567,mobile
+Alice,alice@gmail.com,2000-05-12,Friend,87019876543,home
+Bob,bob@company.com,,Work,87015556677,work
+Mom,mom@gmail.com,1979-03-22,Family,87017778899,mobile
+Alex,alex@yahoo.com,1998-11-02,Other,87016667788,mobile
+Alex,alex@yahoo.com,1998-11-02,Other,87019990000,work
+John,john@gmail.com,1995-08-15,Friend,87012223344,mobile
+Sara,sara@mail.com,2001-01-30,Work,87013334455,work

@@ -1,0 +1,52 @@
+[
+    {
+        "name": "xsds",
+        "score": 1499,
+        "distance": 1339
+    },
+    {
+        "name": "d",
+        "score": 1248,
+        "distance": 1078
+    },
+    {
+        "name": "a",
+        "score": 786,
+        "distance": 726
+    },
+    {
+        "name": "s",
+        "score": 722,
+        "distance": 632
+    },
+    {
+        "name": "a",
+        "score": 604,
+        "distance": 554
+    },
+    {
+        "name": "a",
+        "score": 484,
+        "distance": 424
+    },
+    {
+        "name": "dd",
+        "score": 458,
+        "distance": 408
+    },
+    {
+        "name": "s",
+        "score": 383,
+        "distance": 343
+    },
+    {
+        "name": "a",
+        "score": 355,
+        "distance": 325
+    },
+    {
+        "name": "s",
+        "score": 314,
+        "distance": 284
+    }
+]
