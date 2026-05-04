@@ -22,7 +22,7 @@ LANES = [70, 150, 230, 310]
 
 
 class Player(pygame.sprite.Sprite):
-    def __init__(self, color):
+    def __init__(self):
         super().__init__()
 
         # Load player car image
@@ -263,7 +263,7 @@ def run_game(screen, clock, username, settings):
         add_score(username, score, distance)
         return "game_over", score, distance, coins
 
-    player = Player(settings["car_color"])
+    player = Player()
 
     all_sprites = pygame.sprite.Group()
     traffic = pygame.sprite.Group()

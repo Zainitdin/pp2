@@ -4,7 +4,7 @@ from connect import get_connection
 
 
 # ---------------------------------------------------------
-# Helper function to print database rows in a readable format
+# Heler function to print database rows in a readable format
 # ---------------------------------------------------------
 def print_rows(rows):
     if not rows:

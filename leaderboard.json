@@ -1,5 +1,20 @@
 [
     {
+        "name": "ds",
+        "score": 2247,
+        "distance": 2037
+    },
+    {
+        "name": "wwwww",
+        "score": 1689,
+        "distance": 1559
+    },
+    {
+        "name": "11",
+        "score": 1652,
+        "distance": 1622
+    },
+    {
         "name": "xsds",
         "score": 1499,
         "distance": 1339
@@ -10,43 +25,28 @@
         "distance": 1078
     },
     {
+        "name": "wwwww",
+        "score": 1168,
+        "distance": 1078
+    },
+    {
+        "name": "ds",
+        "score": 982,
+        "distance": 892
+    },
+    {
         "name": "a",
         "score": 786,
         "distance": 726
     },
     {
-        "name": "s",
-        "score": 722,
+        "name": "wwwww",
+        "score": 732,
         "distance": 632
     },
     {
-        "name": "a",
-        "score": 604,
-        "distance": 554
-    },
-    {
-        "name": "a",
-        "score": 484,
-        "distance": 424
-    },
-    {
-        "name": "dd",
-        "score": 458,
-        "distance": 408
-    },
-    {
         "name": "s",
-        "score": 383,
-        "distance": 343
-    },
-    {
-        "name": "a",
-        "score": 355,
-        "distance": 325
-    },
-    {
-        "name": "s",
-        "score": 314,
-        "distance": 284
+        "score": 722,
+        "distance": 632
     }
 ]

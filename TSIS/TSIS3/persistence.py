@@ -15,10 +15,17 @@ DEFAULT_SETTINGS = {
 def load_settings():
     if not os.path.exists(SETTINGS_FILE):
         save_settings(DEFAULT_SETTINGS)
-        return DEFAULT_SETTINGS
+        return DEFAULT_SETTINGS.copy()
 
     with open(SETTINGS_FILE, "r") as file:
-        return json.load(file)
+        settings = json.load(file)
+
+    for key, value in DEFAULT_SETTINGS.items():
+        if key not in settings:
+            settings[key] = value
+
+    save_settings(settings)
+    return settings
 
 
 def save_settings(settings):

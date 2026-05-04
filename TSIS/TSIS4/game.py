@@ -263,7 +263,7 @@ class SnakeGame:
 
     def update_level(self):
         # Every 5 eaten food items = next level
-        new_level = self.food_count // 5 + 1
+        new_level = self.food_count // 2+ 1
 
         # If player reached new level
         if new_level > self.level:
@@ -276,48 +276,57 @@ class SnakeGame:
             self.generate_obstacles()
 
     def handle_collision(self, new_head):
-        # Check collision with borders
+        # 🔹 Check if snake hits left/right/top/bottom borders
         hit_wall = (
-            new_head[0] < 0
-            or new_head[0] >= WIDTH
-            or new_head[1] < 80
-            or new_head[1] >= HEIGHT
+            new_head[0] < 0                  # left wall
+            or new_head[0] >= WIDTH         # right wall
+            or new_head[1] < 80             # top (UI area border)
+            or new_head[1] >= HEIGHT        # bottom wall
         )
 
-        # Check collision with snake body
+        # 🔹 Check if snake collides with itself
         hit_self = new_head in self.snake
 
-        # Check collision with obstacle blocks
+        # 🔹 Check if snake hits obstacle block
         hit_obstacle = new_head in self.obstacles
 
-        # If any collision happens
+        # 🔹 If ANY type of collision happens
         if hit_wall or hit_self or hit_obstacle:
 
-            # Shield protects only from wall or self collision
-            # Obstacle collision still causes game over
-            if self.shield and not hit_obstacle:
+            # 🛡️ If shield is active → prevent death
+            if self.shield:
+                # Turn OFF shield after one use
                 self.shield = False
 
-                # If wall collision happens with shield,
-                # snake appears on opposite side
+                # 🔸 Special behavior for wall collision
+                # Snake teleports to opposite side (wrap effect)
                 if hit_wall:
+                    # Wrap X coordinate
                     x = new_head[0] % WIDTH
+
+                    # Y coordinate stays same
                     y = new_head[1]
 
+                    # Fix vertical boundaries (because top area has UI)
                     if y < 80:
-                        y = HEIGHT - CELL
+                        y = HEIGHT - CELL     # appear at bottom
                     elif y >= HEIGHT:
-                        y = 80
+                        y = 80                # appear below UI
 
-                    self.snake[0] = (x, y)
+                    # Return:
+                    # False → no game over
+                    # (x, y) → corrected safe position
+                    return False, (x, y)
 
-                return False
+                # 🔸 For self or obstacle collision
+                # Ignore ONE collision and keep current head position
+                return False, self.snake[0]
 
-            # No shield means game over
-            return True
+            # ❌ No shield → game over
+            return True, new_head
 
-        # No collision
-        return False
+        # ✅ No collision → continue game normally
+        return False, new_head
 
     def apply_powerup(self):
         # Current time in milliseconds
@@ -382,7 +391,9 @@ class SnakeGame:
         new_head = (head_x + dx, head_y + dy)
 
         # Check collision before moving
-        if self.handle_collision(new_head):
+        collision, new_head = self.handle_collision(new_head)
+
+        if collision:
             self.game_over()
             return
 
